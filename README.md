@@ -5,24 +5,31 @@
 
 ## Graph Comparing the 4 tested algorithms 
 
-## Bubble Sort with Early Exit vs. Bubble Sort without early exit 
-### When it comes to Bubble Sort, it can be run with the ability to exit early if no swaps happened. I wanted to see how effective it is to run that code when compared to running bubble sort without that abiblity. 
-### First, here is a graph that shows how each performs when sorting random lists of different sizes. 
+## Bubble Sort vs. Bubble Sort with Early Exit
 
-### <img width="631" height="473" alt="bubblesRandom" src="https://github.com/user-attachments/assets/f327aaa4-808c-4215-8f4d-366d29f8ea48" />
+## Random Lists 
 
-### Here we see that the time it takes the bubble sort with the early exit even a little longer than it takes the regular bubble sort. this is because... 
+### For Bubble Sort, there’s an option to exit early if no swaps happen during a pass. I wanted to see how much of a difference this feature makes compared to the regular Bubble Sort.
+### Here’s a graph showing how each performs when sorting random lists of different sizes:
 
-### now let's look at how each performs on a fully sorted list 
+# <img width="631" height="473" alt="bubblesRandom" src="https://github.com/user-attachments/assets/f327aaa4-808c-4215-8f4d-366d29f8ea48" />
+
+### We can see that the Bubble Sort with early exit actually takes a little longer than the regular Bubble Sort on random lists. This is because the check for no swaps adds a tiny bit of overhead, which doesn’t pay off when the list is mostly unsorted.
+
+## Fully Sorted Lists
+### Now let’s see how each algorithm performs on a fully sorted list:
 # <img width="620" height="463" alt="bubblesSorted" src="https://github.com/user-attachments/assets/a3cbeec5-47ce-4ded-b98d-b0688f7e1957" />
 
-### Here we see that the one with early exist works much faster and stays constant at a fraction of a second 
+### Here we can see a clear benefit- the Bubble Sort with early exit finishes much faster and stays nearly constant, because it detects that no swaps are needed and stops immediately.
 
-### Based on this my question is at what point of a list being sorted does the early exit feauture become impacful? And below is a graph showing the results of how each performed when dealing with a list of only 5,000 numbers- and the independent variable is the percent of the list that is out of order. 
+## Mostly Sorted Lists
+
+### This made me curious- at what point does the early exit feature start making a noticeable impact? To test this, I ran both algorithms on a list of 5,000 numbers where a certain percentage of the list was out of order.
+
 
 # <img width="629" height="478" alt="bubbleAlmostFinal" src="https://github.com/user-attachments/assets/f965eebc-863f-4efb-93dd-4583f3aa0427" />
 
-### From here we see that at the point where the line for early exit drops below the regular bubble sort is at the turning point is at 1% and below that's where see the early exit having the biggest impact on the time it takes to sort. 
+### From this graph, we can see that the early exit feature starts to significantly reduce sorting time when about 1% of the list is out of order. Below this point, the impact is even more noticeable- the more sorted the list is, the faster the early exit makes Bubble Sort.
 
 
 
