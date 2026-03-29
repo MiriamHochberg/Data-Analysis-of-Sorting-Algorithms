@@ -6,7 +6,6 @@
 #### Second I looked into how Insertion sort compares to Bubble sort.  
 #### And, lastly, I’m exploring how Merge Sort and Radix Sort compare, and in which situations one is faster or more efficient than the other.
 
-
 ## Bubble Sort vs. Bubble Sort with Early Exit
 #### For Bubble Sort, there’s an option to exit early if no swaps happen during a pass. I wanted to see how much of a difference this feature makes compared to the regular Bubble Sort.
 
@@ -34,6 +33,15 @@
 
 
 ## Bubble Sort vs. Insertion 
+#### Bubble Sort and Insertion Sort are both O(n^2)- meaning that as the input list grows, the amount of work scales at a quadratic rate. However, this does not mean that Bubble Sort and Insertion sort have the same performance times because differences in how they process data can lead to significantly different runtimes. For example, the graph below demonstrates graphically how they are O(n^2), but insertion sort is faster.
+# <img width="632" height="480" alt="B_i_random" src="https://github.com/user-attachments/assets/0a9426e0-9308-4974-b7b8-1049d06b6eb3" />
+#### This is because the.... 
 
 ## Testing Merge sort vs. Radix Sort 
+#### Similarly, Merge Sort and Radix Sort are both O(n log(n)). I wanted to explore the different situations in which one preforms better over the other. Based off of the graphs, I concluded that Radix Sort is typically the faster sorting alogorithm as illustrated in the graph below. 
+# <img width="632" height="471" alt="r-m-random" src="https://github.com/user-attachments/assets/42bcaa3b-3ac1-4cec-9b4d-de5c383c91e3" />
+#### However, a situation in which Merge Sort outperforms Radix sort is when they are sorting huge numbers (? bits). This is because Radix sort.... The graph below conveys this 
+# <img width="624" height="478" alt="r-m-huge" src="https://github.com/user-attachments/assets/016245b9-20a3-410f-92c6-5bb2124d21b2" />
+
+
 
