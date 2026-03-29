@@ -3,13 +3,11 @@
 ## Overview 
 ### This project explores how different sorting algorithms in Python perform on arrays of varying sizes. I ran experiments and collected the data with Pandas, then used Matplotlib to visualize performance trends. Working on this project gave me practical experience working with data and understanding how algorithms behave in practice.
 
-## Graph Comparing the 4 tested algorithms 
 
 ## Bubble Sort vs. Bubble Sort with Early Exit
+### For Bubble Sort, there’s an option to exit early if no swaps happen during a pass. I wanted to see how much of a difference this feature makes compared to the regular Bubble Sort.
 
 ## Random Lists 
-
-### For Bubble Sort, there’s an option to exit early if no swaps happen during a pass. I wanted to see how much of a difference this feature makes compared to the regular Bubble Sort.
 ### Here’s a graph showing how each performs when sorting random lists of different sizes:
 
 # <img width="631" height="473" alt="bubblesRandom" src="https://github.com/user-attachments/assets/f327aaa4-808c-4215-8f4d-366d29f8ea48" />
