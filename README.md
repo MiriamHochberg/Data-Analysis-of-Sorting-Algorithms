@@ -1,10 +1,10 @@
 # Data-Analysis-of-Sorting-Algorithms
 
 ## Overview 
-### This project explores how different sorting algorithms in Python perform on arrays of varying sizes. I ran experiments and collected the data with Pandas, then used Matplotlib to visualize performance trends. Working on this project gave me practical experience working with data and understanding how algorithms behave in practice.
-#### The first question I explored is How effective is the early exit in Bubble Sort?
-#### Second I looked into how Insertion sort compares to Bubble sort.  
-#### And, lastly, I’m exploring how Merge Sort and Radix Sort compare, and in which situations one is faster or more efficient than the other.
+### This project analyzes the performance of four sorting algorithms in Python across different input sizes and conditions. I used Pandas to collect timing data and Matplotlib to visualize it, I explored three questions:
+#### How much does the early exit optimization improve Bubble Sort?
+#### How does Insertion Sort compare to Bubble Sort despite sharing the same O(n²) complexity?
+#### When is Radix Sort faster than Merge Sort, and when is Merge Sort the better choice?
 
 ## Bubble Sort vs. Bubble Sort with Early Exit
 #### For Bubble Sort, there’s an option to exit early if no swaps happen during a pass. I wanted to see how much of a difference this feature makes compared to the regular Bubble Sort.
@@ -20,7 +20,7 @@
 #### Now let’s see how each algorithm performs on a fully sorted list:
 # <img width="620" height="463" alt="bubblesSorted" src="https://github.com/user-attachments/assets/a3cbeec5-47ce-4ded-b98d-b0688f7e1957" />
 
-#### Here we can see a clear benefit- the Bubble Sort with early exit finishes much faster and stays nearly constant, because it detects that no swaps are needed and stops immediately.
+#### Here we can see a clear benefit- the Bubble Sort with early exit finishes much faster because it detects that no swaps are needed and stops immediately. This is Bubble Sort at its best case performance- O(n) 
 
 ## Mostly Sorted Lists
 
@@ -29,19 +29,33 @@
 
 # <img width="629" height="478" alt="bubbleAlmostFinal" src="https://github.com/user-attachments/assets/f965eebc-863f-4efb-93dd-4583f3aa0427" />
 
-#### From this graph, we can see that the early exit feature starts to significantly reduce sorting time when about 1% of the list is out of order. Below this point, the impact is even more noticeable- the more sorted the list is, the faster the early exit makes Bubble Sort.
+#### From this graph, we can see that the two algorithms perform similarly until the list is about 0.5% out of order. Below this point, the early exit begins to pull ahead, and the benefit grows dramatically as the list approaches fully sorted. 
 
+## Testing Bubble Sort vs. Insertion Sort 
 
-## Bubble Sort vs. Insertion 
 #### Bubble Sort and Insertion Sort are both O(n^2)- meaning that as the input list grows, the amount of work scales at a quadratic rate. However, this does not mean that Bubble Sort and Insertion sort have the same performance times because differences in how they process data can lead to significantly different runtimes. For example, the graph below demonstrates graphically how they are O(n^2), but insertion sort is faster.
 # <img width="632" height="480" alt="B_i_random" src="https://github.com/user-attachments/assets/0a9426e0-9308-4974-b7b8-1049d06b6eb3" />
-#### This is because the.... 
+#### This difference occurs because of how each algorithm handles elements. Bubble Sort repeatedly compares and swaps adjacent elements, even if they are already close to their correct position. This leads to many unnecessary comparisons and swaps. In contrast, Insertion Sort places each element directly into its correct position by shifting larger elements to the right. This reduces the number of operations needed, especially when elements are already somewhat ordered. As a result, even though both algorithms have the same O(n^2) time complexity, Insertion Sort is generally more efficient in practice and performs significantly better on most inputs.
 
 ## Testing Merge sort vs. Radix Sort 
-#### Similarly, Merge Sort and Radix Sort are both O(n log(n)). I wanted to explore the different situations in which one preforms better over the other. Based off of the graphs, I concluded that Radix Sort is typically the faster sorting alogorithm as illustrated in the graph below. 
+#### Merge Sort runs in O(n log n), while Radix Sort runs in O(nk), where k is the number of digits in the largest number. For typical inputs, k is small and Radix Sort is faster, as shown in the graph below. 
 # <img width="632" height="471" alt="r-m-random" src="https://github.com/user-attachments/assets/42bcaa3b-3ac1-4cec-9b4d-de5c383c91e3" />
-#### However, a situation in which Merge Sort outperforms Radix sort is when they are sorting huge numbers (? bits). This is because Radix sort.... The graph below conveys this 
+#### However, when sorting very large numbers, in this case 15-digit numbers, Radix Sort must make 15 passes through the array, one for each digit. At this point the extra passes outweigh its usual advantage, and Merge Sort becomes the faster option.
+
 # <img width="624" height="478" alt="r-m-huge" src="https://github.com/user-attachments/assets/016245b9-20a3-410f-92c6-5bb2124d21b2" />
+#### Also, Merge Sort also has another advantage: Radix Sort can only handle non-negative integers, while Merge Sort works on any comparable data type including negatives, decimals, and strings.
+
+## Key Takeaways 
+#### Early exit significantly improves Bubble Sort on nearly sorted data but adds slight overhead on random data.
+#### Insertion Sort consistently outperforms Bubble Sort despite both being O(n²).
+#### Radix Sort is faster for typical inputs as compared to Merge Sort, but its performance decreases as the number of digits increases.
+
+
+## Files 
+#### SortDemoCode.py contains the array class and the different sorting algorithms. 
+#### sortBubbleTest.py contains the function and tests for Bubble Sort with early exit vs. regular Bubble Sort 
+#### SortBenchmark.py contains the function and tests for Insertion Sort vs. Bubble Sort and Merge Sort vs. Radix Sort 
+#### All Sorts Graphs contains more graphs relating to the different sorting algorithms 
 
 
 
