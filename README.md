@@ -30,9 +30,7 @@
 
 # <img width="629" height="478" alt="bubbleAlmostFinal" src="https://github.com/user-attachments/assets/f965eebc-863f-4efb-93dd-4583f3aa0427" />
 
-### From this graph, we can see that the early exit feature starts to significantly reduce sorting time when about 1% of the list is out of order. Below this point, the impact is even more noticeable- the more sorted the list is, the faster the early exit makes Bubble Sort.
-
-
+#### From this graph, we can see that the early exit feature starts to significantly reduce sorting time when about 1% of the list is out of order. Below this point, the impact is even more noticeable- the more sorted the list is, the faster the early exit makes Bubble Sort.
 
 
 ## Bubble Sort vs. Insertion 
