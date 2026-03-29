@@ -7,7 +7,7 @@
 
 ## Bubble Sort with Early Exit vs. Bubble Sort without early exit 
 ### When it comes to Bubble Sort, it can be run with the ability to exit early if no swaps happened. I wanted to see how effective it is to run that code when compared to running bubble sort without that abiblity. 
-# First, here is a graph that shows how each performs when sorting random lists of different sizes. 
+### First, here is a graph that shows how each performs when sorting random lists of different sizes. 
 
 ### <img width="631" height="473" alt="bubblesRandom" src="https://github.com/user-attachments/assets/f327aaa4-808c-4215-8f4d-366d29f8ea48" />
 
