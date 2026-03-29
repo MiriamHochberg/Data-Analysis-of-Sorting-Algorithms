@@ -1,10 +1,10 @@
 # Data-Analysis-of-Sorting-Algorithms
 
 ## Overview 
-#### This project explores how different sorting algorithms in Python perform on arrays of varying sizes. I ran experiments and collected the data with Pandas, then used Matplotlib to visualize performance trends. Working on this project gave me practical experience working with data and understanding how algorithms behave in practice.
-### The first question I explored is How effective is the early exit in Bubble Sort?
-### Second I looked into how Insertion sort compares to Bubble sort.  
-### And, lastly, I’m exploring how Merge Sort and Radix Sort compare, and in which situations one is faster or more efficient than the other.
+### This project explores how different sorting algorithms in Python perform on arrays of varying sizes. I ran experiments and collected the data with Pandas, then used Matplotlib to visualize performance trends. Working on this project gave me practical experience working with data and understanding how algorithms behave in practice.
+#### The first question I explored is How effective is the early exit in Bubble Sort?
+#### Second I looked into how Insertion sort compares to Bubble sort.  
+#### And, lastly, I’m exploring how Merge Sort and Radix Sort compare, and in which situations one is faster or more efficient than the other.
 
 
 ## Bubble Sort vs. Bubble Sort with Early Exit
